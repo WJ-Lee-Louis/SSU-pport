@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <style>
+        body {{
+            font-family: 'Malgun Gothic', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }}
+        .container {{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }}
+        .header {{
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+        }}
+        .header h1 {{
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }}
+        .header p {{
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            color: #ffffff;
+            opacity: 0.95;
+        }}
+        .content {{
+            padding: 30px;
+        }}
+        .info-card {{
+            background-color: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }}
+        .info-item {{
+            margin-bottom: 15px;
+        }}
+        .info-label {{
+            font-weight: bold;
+            color: #333;
+            display: inline-block;
+            min-width: 100px;
+        }}
+        .info-value {{
+            color: #555;
+        }}
+        .summary-section {{
+            background-color: #fff9e6;
+            border: 1px solid #ffd700;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }}
+        .summary-section h3 {{
+            color: #e67e22;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }}
+        .footer {{
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }}
+        .highlight {{
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #ffffff;
+            font-weight: bold;
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📢 SSU-pport 알리미</h1>
+            <p><span class="highlight">{category}</span>의 신규 업데이트 내용입니다</p>
+        </div>
+        
+        <div class="content">
+            <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
+                {title}
+            </h2>
+            
+            <div class="info-card">
+                <div class="info-item">
+                    <span class="info-label">🎯 대상:</span>
+                    <span class="info-value">{target}</span>
+                </div>
+                
+                {schedule_section}
+                
+                {application_method_section}
+            </div>
+            
+            <div class="summary-section">
+                <h3>📋 세부내용</h3>
+                <p>{important_notes}</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>이 메일은 SSU-pport 시스템에서 자동으로 발송되었습니다.</p>
+            <p>문의사항이 있으시면 관리자에게 연락해 주세요.</p>
+        </div>
+    </div>
+</body>
+</html>
